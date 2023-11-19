@@ -20,7 +20,7 @@
                             <h2>{{ $kepalaSekolah->jabatan }}</h2>
                         </div>
                         <img src="{{ asset('storage/' . $kepalaSekolah->foto) }}" alt=""
-                            class="card-img-top mx-auto" style="width: 200px">
+                            class="card-img-top mx-auto object-fit-fill" style="width: 200px">
                         <div class="card-body">
                             <h3>{{ $kepalaSekolah->nama }}</h3>
                             <h5>{{ $kepalaSekolah->nip }}</h5>
