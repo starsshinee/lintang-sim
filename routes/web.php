@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{HomeController, DashboardController, KompetensiController, PrestasiController, staffController, StrukturController, GaleriController, AuthController};
+use App\Http\Controllers\{HomeController, DashboardController, KompetensiController, PrestasiController, staffController, StrukturController, GaleriController, AuthController, EraporController, GuruController};
 use App\Models\Prestasi;
 use Illuminate\Support\Facades\Route;
 
@@ -85,21 +85,28 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::put('/update/{id}', [GaleriController::class, 'update'])->name('dashboard.galeri.update');
                 Route::delete('/destroy/{id}', [GaleriController::class, 'destroy'])->name('dashboard.galeri.destroy');
             });
+            //Route Kompetensi Guru
+            Route::prefix('guru')->group(function () {
+                Route::get('/', [GuruController::class, 'index'])->name('dashboard.guru');
+                Route::get('/create', [GuruController::class, 'create'])->name('dashboard.guru.create');
+                Route::post('/store', [GuruController::class, 'store'])->name('dashboard.guru.store');
+                Route::get('/edit/{id}', [GuruController::class, 'edit'])->name('dashboard.guru.edit');
+                Route::put('/update/{id}', [GuruController::class, 'update'])->name('dashboard.guru.update');
+                Route::delete('/destroy/{id}', [GuruController::class, 'destroy'])->name('dashboard.guru.destroy');
+            });
         });
     });
 
     Route::group(['middleware' => ['admin_auth:guru']], function () {
         Route::prefix('dashboard-guru')->group(function () {
-            Route::get('/', [DashboardController::class, 'index'])->name('dashboard-guru');
-            Route::prefix('kompetensi')->group(function () {
-                Route::get('/', [KompetensiController::class, 'index'])->name('dashboard-guru.kompetensi');
-                Route::get('/create', [KompetensiController::class, 'create'])->name('dashboard-guru.kompetensi.create');
-                Route::post('/store', [KompetensiController::class, 'store'])->name('dashboard-guru.kompetensi.store');
-                Route::get('/show/{id}', [KompetensiController::class, 'show'])->name('dashboard-guru.kompetensi.show');
-                Route::get('/edit/{id}', [KompetensiController::class, 'edit'])->name('dashboard-guru.kompetensi.edit');
-                Route::put('/update/{id}', [KompetensiController::class, 'update'])->name('dashboard-guru.kompetensi.update');
-                Route::delete('/destroy/{id}', [KompetensiController::class, 'destroy'])->name('dashboard-guru.kompetensi.destroy');
-                Route::delete('/destroyDetail/{id}', [KompetensiController::class, 'destroyDetail'])->name('dashboard-guru.kompetensi.destroyDetail');
+            Route::get('/', [DashboardController::class, 'indexGuru'])->name('dashboard-guru');
+            Route::prefix('erapor')->group(function () {
+                Route::get('/', [EraporController::class, 'index'])->name('dashboard-guru.erapor');
+                Route::get('/create', [EraporController::class, 'create'])->name('dashboard-guru.erapor.create');
+                Route::post('/store', [EraporController::class, 'store'])->name('dashboard-guru.erapor.store');
+                Route::get('/edit/{id}', [EraporController::class, 'edit'])->name('dashboard-guru.erapor.edit');
+                Route::put('/update/{id}', [EraporController::class, 'update'])->name('dashboard-guru.erapor.update');
+                Route::delete('/destroy/{id}', [EraporController::class, 'destroy'])->name('dashboard-guru.erapor.destroy');
             });
         });
     });

@@ -85,6 +85,15 @@
                                     <span class="hide-menu">Staff</span>
                                 </a>
                             </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link {{ request()->is('dashboard/guru*') ? 'active' : '' }}"
+                                    href="{{ route('dashboard.guru') }}" aria-expanded="false">
+                                    <span>
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <span class="hide-menu">Guru</span>
+                                </a>
+                            </li>
 
                             <li class="sidebar-item">
                                 <a class="sidebar-link {{ request()->is('dashboard/struktur*') ? 'active' : '' }}"
@@ -106,12 +115,21 @@
                             </li>
                         @elseif(Auth::user()->role == 'guru')
                             <li class="sidebar-item">
-                                <a class="sidebar-link {{ request()->is('dashboard/galeri*') ? 'active' : '' }}"
-                                    href="{{ route('dashboard.galeri') }}" aria-expanded="false">
+                                <a class="sidebar-link {{ request()->is('dashboard-guru') ? 'active' : '' }}"
+                                    href="{{ route('dashboard-guru') }}" aria-expanded="false">
+                                    <span>
+                                        <i class="ti ti-layout-dashboard"></i>
+                                    </span>
+                                    <span class="hide-menu">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link {{ request()->is('dashboard-guru.erapor/erapor*') ? 'active' : '' }}"
+                                    href="{{ route('dashboard-guru.erapor') }}" aria-expanded="false">
                                     <span>
                                         <i class="fa-solid fa-image"></i>
                                     </span>
-                                    <span class="hide-menu">Galeri Kegiatan</span>
+                                    <span class="hide-menu">E Rapor</span>
                                 </a>
                             </li>
                         @endif

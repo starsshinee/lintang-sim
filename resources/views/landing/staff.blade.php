@@ -13,21 +13,21 @@
     {{-- Kepala Sekolah --}}
     <div class="container mb-3">
         <div class="d-flex flex-column justify-content-center">
-
-            <div class="col-auto mx-auto text-center">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>{{ $kepalaSekolah->jabatan }}</h2>
-                    </div>
-                    <img src="{{ asset('storage/' . $kepalaSekolah->foto) }}" alt="" class="card-img-top mx-auto"
-                        style="width: 200px">
-                    <div class="card-body">
-                        <h3>{{ $kepalaSekolah->nama }}</h3>
-                        <h5>{{ $kepalaSekolah->nip }}</h5>
+            @if ($kepalaSekolah)
+                <div class="col-auto mx-auto text-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>{{ $kepalaSekolah->jabatan }}</h2>
+                        </div>
+                        <img src="{{ asset('storage/' . $kepalaSekolah->foto) }}" alt=""
+                            class="card-img-top mx-auto" style="width: 200px">
+                        <div class="card-body">
+                            <h3>{{ $kepalaSekolah->nama }}</h3>
+                            <h5>{{ $kepalaSekolah->nip }}</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            @endif
         </div>
     </div>
 

@@ -12,6 +12,8 @@
     </div>
     <hr class="mx-5 bg-danger border-5 border-top border-dark ">
     <div class="container-fluid align-center d-block justify-content-center d-flex ">
-        <img src="{{ asset('storage/' . $struktur->foto_struktur) }}" alt="" srcset="" style="width:1450px">
+        @if ($struktur)
+            <img src="{{ asset('storage/' . $struktur->foto_struktur) }}" alt="" srcset="" style="width:1450px">
+        @endif
     </div>
 @endsection
