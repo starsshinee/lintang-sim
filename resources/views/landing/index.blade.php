@@ -12,9 +12,10 @@
                     <h3 class="fw-bold">Sistem Informasi</h3>
                     <h1 class="display-5 fw-bold lh-1 mb-3">SMK NEGERI <br> <span style="color: #D37E00">MODEL
                             GORONTALO</span></h1>
-                    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
-                        world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                        responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <p class="lead  ">SMK Negeri Model Gorontalo dalam mengembangkan kurikulum berupaya menggunakan
+                        pendekatan desentralistik sesuai dengan fleksibilitas yang diatur oleh Keputusan Menteri Pendidikan
+                        Kebudayaan Riset dan Teknologi Nomor 033/H/KR/2022 Tentang Capaian Pembelajaran Pada Pendidikan Anak
+                        Usia Dini, Jenjang Pendidikan Dasar, Dan Jenjang Pendidikan Menengah Pada Kurikulum Merdeka.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                     </div>
                 </div>
