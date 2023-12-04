@@ -32,7 +32,7 @@
                                     <img src="{{ asset('assetsDashboard/images/logos/SMAN MODEL LOGO.PNG' ) }}" width="80rem"
                                         alt="">
                                 </a>
-                                <p class="text-center">Login Admin</p>
+                                <p class="text-center">LOGIN</p>
                                 <form action="{{ route('login_proc') }}" method="post">
                                     @csrf
                                     <div class="mb-3">

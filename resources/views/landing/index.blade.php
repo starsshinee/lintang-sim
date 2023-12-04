@@ -94,7 +94,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/img/smamodel.jpeg" class="d-block w-100" alt="..."
+                    <img src="assets/img/kegiatan 11.jpeg" class="d-block w-100" alt="..."
                         style="height: 500px; object-fit:cover">
                 </div>
                 <div class="carousel-item">
@@ -256,7 +256,7 @@
                             hidayah-Nya sehingga kita masih diberi kesempatan untuk bekerja dan berkarya di bidang
                             pendidikan. Karena pendidikan merupakan upaya kita untuk menyiapkan generasi penerus
                             bangsa, yang akan menggantikan estafet kepemimpinan kita di masa mendatang.
-                            Kami mengucapkan selamat datang di website resmi SMK Jakarta Pusat 1 yang dapat
+                            Kami mengucapkan selamat datang di website resmi SMK Negeri Model Gorontalo yang dapat
                             digunakan sebagai salah satu media komunikasi, dan interaksi antara civitas akademika
                             dan masyarakat pada umumnya.
                             Mari kita bekerja dan berkarya dengan mengharap ridho-Nya dan keikhlasan yang tulus demi
