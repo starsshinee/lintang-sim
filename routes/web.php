@@ -61,7 +61,7 @@ Route::group(['middleware' => ['auth']], function () {
                 Route::post('/store', [staffController::class, 'store'])->name('dashboard.staff.store');
                 Route::get('/show/{id}', [staffController::class, 'show'])->name('dashboard.staff.show');
                 Route::get('/edit/{id}', [staffController::class, 'edit'])->name('dashboard.staff.edit');
-                Route::put('/update/{id}', [staffController::class, 'update'])->name('dashboard.staff.update');
+                Route::post('/update/{id}', [staffController::class, 'update'])->name('dashboard.staff.update');
                 Route::delete('/destroy/{id}', [staffController::class, 'destroy'])->name('dashboard.staff.destroy');
             });
 

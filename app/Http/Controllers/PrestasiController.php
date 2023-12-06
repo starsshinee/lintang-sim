@@ -33,7 +33,7 @@ class PrestasiController extends Controller
     {
         $data = Prestasi::create($request->all());
         if ($request->hasFile('foto_siswa')) {
-            $foto = $request->file('foto_siswa')->store('foto_siswa', 'public');
+            $foto = $request->file('foto_siswa')->store('foto_siswa', 'storage');
             $data->foto_siswa = $foto;
             $data->save();
         }

@@ -4,12 +4,12 @@
     <div class="card shadow">
         <div class="card-body p-4">
             <h2 class="fw-bolder text-primary">Tambah Data Staff</h2>
-            <form action="{{ route('dashboard.staff.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('dashboard.staff.update', $data->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-grup row">
                     <label for="exampleInputPassword1" class="col-sm-2 col-form-label mx-1">Nama Staff</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="nama"cvalue="{{$data->nama}}>
+                        <input type="text" class="form-control" name="nama" value="{{$data->nama}}">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -37,9 +37,12 @@
                 <fieldset class="form-group">
                     <label for="inputPassword3" class="col-sm-2 col-form-label ">Foto Staff</label>
                     <div class="col-sm-10 my-2">
-                        <input type="file" class="form-control-file" name="foto" value="{{$data->foto_}}">
+                        <input type="file" class="form-control-file" name="foto" value="{{$data->foto}}">
                     </div>
                 </fieldset>
+                <div class="row mb-2">
+                    <img src="{{ asset("storage/" . $data->foto) }}" class="img" style="width:200px;" alt="" srcset="">
+                </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
                         <button type="submit" class="btn btn-primary">Kirim</button>
